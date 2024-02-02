@@ -6,6 +6,7 @@ CoordinateList::CoordinateList(unsigned int size) {
    
    for (unsigned int i=0; i<size; i++) {
 	   allPoints.push_back(new Coordinate((rand() % 100), (rand() % 100)));
+      std::cout << i << std::endl;
 	}
 	center = nullptr;
 	
@@ -28,6 +29,11 @@ void CoordinateList::createCenterPoint() {
 //create a new Coordinate that is the center of the 
 //points in the vector - (this will be a coordinate where x = average of all xs, and y=average of all ys)
 //assign private variable center to this new object
+   int sumX = 0;
+   int sumY = 0;
+   for (auto i : allPoints) {
+      std::cout<<i<<std::endl;
+   }
 }
 
 unsigned int CoordinateList::getDistanceFromCenter(unsigned int index) {
